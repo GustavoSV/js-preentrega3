@@ -48,30 +48,37 @@ cursadasOrden.sort((curso1, curso2) => {
 });
 
 const tablaCursadas = document.getElementById("tabla-cursadas");
-for (const curso of cursadasOrden) {
-    let fila = document.createElement("tr");
-    fila.innerHTML = 
-                    `<th scope="row">${curso.codigoCursada}</th>
-                    <td>${curso.nombreCursada}</td>
-                    <td>${curso.duracionMeses}</td>
-                    <td>${curso.valorCursada}</td>
-                    <a href="alumnos.html" class="btn btn-primary m-1">Agregar Alumno</a>
-                    <a href="alumnos.html" class="btn btn-primary m-1">Eliminar Alumno</a>
-                    <a href="alumnos.html" class="btn btn-primary m-1">Agregar Notas</a>
-                    <a href="alumnos.html" class="btn btn-primary m-1">Ver Notas</a>`;
-    tablaCursadas.appendChild(fila);
-};
+if (tablaCursadas != null) {
+    for (const curso of cursadasOrden) {
+        let fila = document.createElement("tr");
+        fila.innerHTML = 
+                        `<th scope="row">${curso.codigoCursada}</th>
+                        <td>${curso.nombreCursada}</td>
+                        <td>${curso.duracionMeses}</td>
+                        <td>${curso.valorCursada}</td>
+                        <a href="alumnos.html" class="btn btn-primary m-1">Agregar Alumno</a>
+                        <a href="alumnos.html" class="btn btn-primary m-1">Eliminar Alumno</a>
+                        <a href="alumnos.html" class="btn btn-primary m-1">Agregar Notas</a>
+                        <a href="alumnos.html" class="btn btn-primary m-1">Ver Notas</a>`;
+        tablaCursadas.appendChild(fila);
+    };
+}
 
 function listaAlumnos() {
     const tablaAlumnos = document.getElementById("tabla-alumnos");
-    for (const alumno of alumnos) {
-        let fila = document.createElement("tr");
-        fila.innerHTML = 
-                    `<th class="fila-alumno" scope="row">${alumno.nombreAlumno}</th>
-                    <td class="fila-alumno">${alumno.sexo}</td>
-                    <td class="fila-alumno">${alumno.edad}</td>
-                    <a href="alumnos.html" class="btn btn-primary m-1 fila-alumno">Agregar Alumno</a>
-                    <a href="alumnos.html" class="btn btn-primary m-1 fila-alumno">Eliminar Alumno</a>`;
-        tablaAlumnos.appendChild(fila);
+    if (tablaAlumnos != null) {
+        for (const alumno of alumnos) {
+            console.log(alumno.nombreAlumno);
+            let fila = document.createElement("tr");
+            fila.innerHTML = 
+                        `<th class="fila-alumno" scope="row">${alumno.nombreAlumno}</th>
+                        <td class="fila-alumno">${alumno.sexo}</td>
+                        <td class="fila-alumno">${alumno.edad}</td>
+                        <a href="alumnos.html" class="btn btn-primary m-1 fila-alumno">Agregar Alumno</a>
+                        <a href="alumnos.html" class="btn btn-primary m-1 fila-alumno">Eliminar Alumno</a>`;
+            tablaAlumnos.appendChild(fila);
+        };
     }
 };
+
+listaAlumnos();
