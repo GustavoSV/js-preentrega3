@@ -29,6 +29,20 @@
             </tr> -->
         </tbody>
     </table>
+    <div class="container-sm">
+        <h3 class="m-5">Ingrese un Alumno a una Cursada</h3>
+        <form class="m-3" id="formIngresoAlumno">
+            <label class="form-label">Seleccione la Cursada</label>
+            <select class="form-select col-3 mb-3" id="cursadaIngreso">
+                <option value="F">Femenino</option>
+                <option value="M">Masculino</option>
+            </select>
+            <label class="form-label">Seleccione el Alumno</label>
+            <select class="form-select col-3 mb-3" id="alumnoIngreso">
+            </select>
+            <button type="button" class="btn btn-primary mt-3" id="botonAgregarAlCursada">Agregar</button>
+        </form>
+    </div>
 
     <a class="m-2" href="index.html">Volver a Inicio</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

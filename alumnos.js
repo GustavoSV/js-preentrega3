@@ -46,12 +46,12 @@ const tablaHTML =
     <tbody id="tabla-alumnos-items">
     </tbody>`;
 let i = -1;
-// let alumnos;
+
 let alumnosLS = localStorage.getItem("alumnosLS");
 if (alumnosLS) {
     alumnos = JSON.parse(alumnosLS);
 } else {
-    let alumnos = [];
+    alumnos = [];
 }
 
 listaAlumnos();
